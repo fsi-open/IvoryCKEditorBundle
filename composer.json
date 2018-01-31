@@ -12,7 +12,7 @@
     ],
     "require": {
         "php": "^5.6|^7.0",
-        "egeloen/json-builder": "^2.0|^3.0",
+        "fsi/json-builder": "^2.0|^3.0",
         "symfony/dependency-injection": "^2.7|^3.0|^4.0",
         "symfony/form": "^2.7|^3.0|^4.0",
         "symfony/framework-bundle": "^2.7|^3.0|^4.0"
@@ -28,7 +28,7 @@
         "symfony/templating": "^2.7|^3.0|^4.0",
         "symfony/twig-bridge": "^2.7|^3.0|^4.0",
         "symfony/yaml": "^2.7|^3.0|^4.0",
-        "twig/twig": "^1.12"
+        "twig/twig": "^1.12|^2.0"
     },
     "suggest": {
         "egeloen/form-extra-bundle": "Allows to load CKEditor asynchronously",
@@ -43,7 +43,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "1.0-dev"
+            "dev-master": "6.0-dev"
         }
     }
 }
