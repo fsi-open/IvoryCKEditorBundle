@@ -4,19 +4,6 @@ set -e
 
 SYMFONY_VERSION=${SYMFONY_VERSION-2.7.*}
 COMPOSER_PREFER_LOWEST=${COMPOSER_PREFER_LOWEST-false}
-DOCKER_BUILD=${DOCKER_BUILD-false}
-
-if [ "$DOCKER_BUILD" = true ]; then
-    cp .env.dist .env
-    sed -i -e 's/USER_ID=1000/USER_ID='"$UID"'/g' .env
-
-    docker-compose build
-    docker-compose run --rm php composer update --prefer-source
-
-    exit
-fi
-
-composer self-update
 
 composer require --no-update --dev symfony/asset:${SYMFONY_VERSION}
 composer require --no-update --dev symfony/console:${SYMFONY_VERSION}
